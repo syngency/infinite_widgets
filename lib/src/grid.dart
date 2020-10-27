@@ -75,9 +75,7 @@ class _InfiniteGridViewState extends State<InfiniteGridView> {
   }
 
   bool _hasScroll() {
-    return _scrollController.position != null &&
-        _scrollController.position.maxScrollExtent != null &&
-        _scrollController.position.maxScrollExtent > 0;
+    return _scrollController.position.hasContentDimensions;
   }
 
   @override
